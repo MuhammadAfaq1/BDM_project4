@@ -1,0 +1,27 @@
+[project]
+name = "rico-pipeline"
+version = "0.1.0"
+description = "Project 4 — RICO multimodal pipeline as an Airflow DAG"
+requires-python = ">=3.11"
+dependencies = [
+    "apache-airflow>=2.10,<3",
+    "psycopg[binary]>=3.2",
+    "pgvector>=0.3",
+    "boto3>=1.35",
+    "requests>=2.32",
+    "datasets<3",
+    "huggingface_hub<0.24",
+    "fsspec<2024.4",
+    "pillow>=10.0",
+    "numpy>=1.26",
+    "torch>=2.4",
+    "open-clip-torch>=2.30",
+    "sentence-transformers>=3.0",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
